@@ -1,0 +1,17 @@
+.UpdateCataractForm{
+    background-color: #008080;
+    text-align: center;
+    width: 600px;
+    height: 690px;
+    border-radius: 25px;
+    margin-left: 420px;
+    border: 5px solid black;
+}
+.UpdateCataractHeading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+    margin-bottom: 30px;
+}

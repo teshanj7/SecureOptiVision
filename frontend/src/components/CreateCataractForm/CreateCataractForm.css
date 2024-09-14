@@ -1,0 +1,65 @@
+.CataractHeading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+    margin-bottom: 30px;
+}
+.CataractForm{
+    background-color: #008080;
+    text-align: center;
+    width: 600px;
+    height: 640px;
+    border-radius: 25px;
+    margin-left: 420px;
+    border: 5px solid black;
+}
+.CataractFormHeading{
+    color: white;
+    padding-top: 10px;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+}
+.CataractFormInput{
+    width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    height: 40px;
+    font-family: 'Jost', sans-serif;
+}
+.CataractFormImg{
+    color: white;
+}
+.CataractFormSubmitbtn{
+    background-color: #56c411;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+}
+.CataractFormSubmitbtn:hover{
+    background-color: #1F1F1F;
+    color: #56c411;
+    font-family: 'Secular One', sans-serif;
+}
+.CataractFormCancelbtn{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+}
+.CataractFormCancelbtn:hover{
+    background-color: #1F1F1F;
+    color: #56c411;
+    font-family: 'Secular One', sans-serif;
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jspdf": "^2.5.1",
+    "react-toastify": "^9.1.3"
+  }
+}

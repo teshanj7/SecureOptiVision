@@ -1,0 +1,120 @@
+.container-fluid{
+    background-color: black;
+    height: 70px;
+}
+.navbar{
+    padding: 0%;
+}
+.view_page{
+    margin: 0;
+    padding: 0;
+ }
+
+
+
+ .navbar-brand{
+    color: white;
+    font-size: 50px ;
+    font-weight: 500;
+ }
+ .navbar-brand:hover{
+    color: #CCFF00;
+ }
+
+ .fa-solid{
+   margin-left: 500px;
+ }
+
+
+
+
+ .user_page_heading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+.img-fluid{
+    width: 250px;
+}
+.Userupdatebtn{
+    background-color: #56c411;
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 790px;
+    font-family: 'Secular One', sans-serif;
+}
+.Userupdatebtn:hover{
+    background-color: #1F1F1F;
+    color: #56c411;
+}
+.Userdeletebtn{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+}
+.Userdeletebtn:hover{
+    background-color: #1F1F1F;
+    color: #56c411;
+}
+.view_body{
+   background-color: white;
+   height: auto;
+}
+.text-muted{
+    font-size: 20px;
+}
+#view_User_heading{
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    font-family: 'Secular One', sans-serif;
+}
+#view_User_details{
+    margin-left: 40%;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+}
+.collection-item{
+   width: 100%;
+}
+.ViewUserDetailsCard{
+    width: 65%;
+}
+.viewUserCard{
+    background-color: #008080;
+}
+.ViewUserImgCard{
+    background-color: #008080;
+}
+.nameAndType{
+    color: white;
+    font-family: 'Secular One', sans-serif;
+}
+
+.UserPaymentbtn{
+    background-color: goldenrod;
+    color: white;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    font-family: 'Secular One', sans-serif;
+    margin-left: -170px;
+    margin-top: -20070px;
+}

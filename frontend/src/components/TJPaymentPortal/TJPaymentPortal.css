@@ -1,0 +1,77 @@
+.TJAddPaymentPage{
+    background-color: white;
+    height: auto;
+}
+
+.TJPaymentHeading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.TJPaymentSubHeading{
+    color: #008080;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 30px;
+}
+
+.TJAddPaymentForm{
+    margin-top: -90px;
+    background-color: #008080;
+    text-align: center;
+    width: 600px;
+    height: 500px;
+    border-radius: 50px;
+    margin-left: 450px;
+    border: 5px solid black;
+}
+
+.TJExpHeading{
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.TJCreateExpDetails{
+    width: 60px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+}
+
+.TJCreateExpDetails2{
+    max-width: 60px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.TJPaymentSubmit{
+    background-color: #99FF33;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+    margin-bottom: 90px ;
+}
+
+.TJPaymentSubmit:hover{
+    background-color: #1F1F1F;
+    color: #99FF33;
+    font-family: 'Secular One', sans-serif;
+}
