@@ -55,6 +55,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Prevent directory browsing and hide dotfiles
+app.use(express.static('public', { dotfiles: 'ignore', index: false }));
+
+
 // Define routes
 const authRoute = require("./routes/authRoutes");
 app.use("/auth", authRoute);
