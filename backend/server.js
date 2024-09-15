@@ -58,6 +58,8 @@ app.use(passport.session());
 // Prevent directory browsing and hide dotfiles
 app.use(express.static('public', { dotfiles: 'ignore', index: false }));
 
+//Defense against clickjacking attacks.
+app.use(helmet.frameguard({ action: 'deny' }));
 
 // Define routes
 const authRoute = require("./routes/authRoutes");
