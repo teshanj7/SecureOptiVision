@@ -12,6 +12,23 @@ const passport = require("passport");
 const session = require('express-session');
 const passportStrategy = require("./passport");
 
+// use helmet package for secure csp policy
+const helmet = require("helmet");
+
+// use helmet package for enable various security policy
+app.use(helmet());
+
+// use a csp policy for this express app
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+    }
+  })
+)
+
 app.use(express.json());
 app.use(bodyParser.json());
 
