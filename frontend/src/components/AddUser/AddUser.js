@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../AddUser/AddUser.css";
+import styles from "../AddUser/AddUser.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import signup_logo from "../AddUser/signuppic2.jpg";
 import signup_logo_1 from "../AddUser/signuppic3.jpg";
 import signup_logo_2 from "../AddUser/signuppic4.jpg";
+import google_signup from "../AddUser/google.png";
 
 export default function AddUser() {
   const [Fullname, setName] = useState("");
@@ -82,6 +83,13 @@ export default function AddUser() {
           });
     }
   };
+
+  const googleAuth = () => {
+		window.open(
+			`http://localhost:8040/auth/google/callback`,
+			"_self"
+		);
+	};
 
   return (
     <div className="reg_page">
@@ -291,6 +299,12 @@ export default function AddUser() {
             <a href="/login">Login</a>&nbsp;&nbsp;
             <label htmlFor="redirect" className="signupheading1">
               here.
+            </label>
+            <label>
+            <button className={styles.google_btn} onClick={googleAuth}>
+						<img src={google_signup} alt="google icon" />
+						<span>Sing up with Google</span>
+					  </button>
             </label>
           </form>
         </div>
