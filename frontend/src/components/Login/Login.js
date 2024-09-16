@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UserContext from "../ContextComponents/ContextComponent";
 import login_logo from "../Login/loginpic2.jpg";
+import google_signup from "../AddUser/google.png";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -159,18 +160,22 @@ export default function Login() {
             />
             <br />
             <br />
-            <br />
             <button type="submit" className="loginsubmit">
               LOGIN
             </button>
             <br />
-            <br />
             <label htmlFor="loginpage" className="loginheading1">
-              If you don’t have an account ?
+              or
             </label>
             <br />
-            <label htmlFor="redirect" className="loginheading1">
-              please
+            <label>
+            <button className="SignUpWithGoogleBtn">
+						<img src={google_signup} alt="google icon" className="googleLogo" />
+						<span>Sign up with Google</span>
+					  </button>
+            </label><br/><br/>
+            <label htmlFor="loginpage" className="loginheading1">
+              Don’t have an account? 
             </label>
             &nbsp;&nbsp;
             <a href="/add">Signup</a>&nbsp;&nbsp;
