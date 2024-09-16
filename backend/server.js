@@ -60,6 +60,16 @@ app.use(express.static('public', { dotfiles: 'ignore', index: false }));
 
 //Defense against clickjacking attacks.
 app.use(helmet.frameguard({ action: 'deny' }));
+
+//image upload
+app.use(express.static(path.join(__dirname)))
+app.use(express.json())
+app.use("/images",express.static(path.join(__dirname+"/images")))
+
+//images glaucoma
+app.use(express.static(path.join(__dirname)))
+app.use(express.json())
+app.use("/glaucomaImages",express.static(path.join(__dirname+"/glaucomaImages")))
  
 // Define routes
 const authRoute = require("./routes/authRoutes");
