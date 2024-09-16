@@ -30,7 +30,7 @@ passport.use(
             googleId: profile.id,
             Username: profile.displayName,
             Email: profile.emails[0].value,
-            UserType: "patient"
+            UserType: "Patient"
           }).save();
           done(null, user);
         }
