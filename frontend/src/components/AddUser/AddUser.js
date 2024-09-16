@@ -307,7 +307,16 @@ export default function AddUser() {
             <br />
             <button type="submit" className="signupsubmit">
               SUBMIT
-            </button>
+            </button> <br/>
+            <label htmlFor="loginpage" className="signupheading">
+              or
+            </label><br/>
+            <label>
+            <button className="SignUpWithGoogleBtn" onClick={googleAuth}>
+						<img src={google_signup} alt="google icon" className="googleLogo" />
+						<span>Sign up with Google</span>
+					  </button>
+            </label><br/>
             <label htmlFor="loginpage" className="signupheading">
               If you have already an account?
             </label>
@@ -320,12 +329,7 @@ export default function AddUser() {
             <label htmlFor="redirect" className="signupheading1">
               here.
             </label>
-            <label>
-            <button className={styles.google_btn} onClick={googleAuth}>
-						<img src={google_signup} alt="google icon" />
-						<span>Sing up with Google</span>
-					  </button>
-            </label>
+
           </form>
         </div>
       </div>

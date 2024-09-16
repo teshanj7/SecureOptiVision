@@ -161,7 +161,7 @@
 
 .google_btn {
     width: 230px;
-    height: 40px;
+    height: 20px;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -176,6 +176,16 @@
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.SignUpWithGoogleBtn{
+    width: 200px;
+    height: 30px;
+}
+
+.googleLogo{
+    width: 20px;
+    height: 20px;
 }
 
 .google_btn > img{
