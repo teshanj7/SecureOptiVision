@@ -14,7 +14,7 @@ const passportStrategy = require("./passport");
 
 app.use(express.json());
 app.use(bodyParser.json());
-
+app.use(cors());
 // Configure cookie-session
 // app.use(
 //   cookieSession({

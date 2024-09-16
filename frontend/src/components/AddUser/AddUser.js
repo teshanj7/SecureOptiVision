@@ -62,7 +62,7 @@ export default function AddUser() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(newUser),
+        body: JSON.stringify({newUser}),
       });
 
       if (response.status === 200) {
