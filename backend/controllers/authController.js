@@ -6,8 +6,7 @@ const bcrypt = require("bcrypt");
 const registerUser = async (req, res) => {
   try {
     const TelephoneNumber = Number(req.body.newUser.TelephoneNumber);
-    const { Fullname, Email, Address, UserType, Gender, Username, Password } =
-      req.body.newUser;
+    const { Fullname, Email, Address, UserType, Gender, Username, Password } =req.body.newUser;
 
     const user = await User.findOne({ Email });
 
