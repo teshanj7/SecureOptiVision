@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../AddUser/AddUser.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -21,6 +21,26 @@ export default function AddUser() {
 
   const navigate = useNavigate();
 
+  // Fetch the query params from the URL to show any error message after Google auth
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const success = queryParams.get('success');
+    const message = queryParams.get('message');
+
+    if (success === 'false' && message) {
+      toast.error(message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -40,8 +60,8 @@ export default function AddUser() {
       const response = await fetch("http://localhost:8040/auth/add", {
         method: "POST",
         headers: {
-            'Content-Type': 'application/json'
-          },
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({newUser}),
       });
 
@@ -71,16 +91,16 @@ export default function AddUser() {
         });
       }
     } catch (error) {
-        toast.error("Server cannot be reached, please try again later.", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
+      toast.error("Server cannot be reached, please try again later.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
 
@@ -287,7 +307,16 @@ export default function AddUser() {
             <br />
             <button type="submit" className="signupsubmit">
               SUBMIT
-            </button>
+            </button> <br/>
+            <label htmlFor="loginpage" className="signupheading">
+              or
+            </label><br/>
+            <label>
+            <button className="SignUpWithGoogleBtn" onClick={googleAuth}>
+						<img src={google_signup} alt="google icon" className="googleLogo" />
+						<span>Sign up with Google</span>
+					  </button>
+            </label><br/>
             <label htmlFor="loginpage" className="signupheading">
               If you have already an account?
             </label>
@@ -300,12 +329,7 @@ export default function AddUser() {
             <label htmlFor="redirect" className="signupheading1">
               here.
             </label>
-            <label>
-            <button className={styles.google_btn} onClick={googleAuth}>
-						<img src={google_signup} alt="google icon" />
-						<span>Sing up with Google</span>
-					  </button>
-            </label>
+
           </form>
         </div>
       </div>
